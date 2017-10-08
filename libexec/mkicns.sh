@@ -1,5 +1,11 @@
 #!/usr/bin/env bash
 
+if [ $# -lt 1 ]
+  then
+    echo "Expected <image_name>"
+    exit
+fi
+
 mkdir $1.iconset
 
 sips -z 16 16     $1.png --out $1.iconset/icon_16x16.png
